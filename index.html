@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.google.com/share?selectison.family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&family=Poppins:wght@200;300;400;600&family=Quicksand:wght@300;400;500;600;700&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+</head>
+<body>
+    <!----------------------- Navbar ----------------------->
+<header>
+    <nav class="navbar container flex">
+        <h1 class="logo"><a href="#">ECOguardians</a></h1>
+
+        <input title="bars" type="checkbox" id="menu-toggler">
+        <label for="menu-toggler" id="hamburger-btn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        
+        <ul class="nav-links flex">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="./donation.html">Donate</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!----------------------- Home Page ----------------------->
+<section class="homepage" id="home">
+    <div class="image">
+        <img src="./assets/images/puppy.jpg" alt="">
+        <video autoplay loop muted src="./assets/images/animalVideo.mp4"></video>
+    </div>
+    <div class="content flex">
+        <div class="text">
+            <h2>Give some love to <span></span></h2>
+            <p>Animal welfare is not just about animals. It is about us. Our living 
+                conditions, our children, our earth.
+            </p>
+        </div>
+        <a href="./donation.html">Donate</a>
+    </div>
+</section>
+
+    <!----------------------- Gallery ----------------------->
+<section class="sliders">
+    <div class="slider-container">
+        
+        <div>
+            <h2 class="intro-head">Welcome to EcoGuardians: Restoring Ecosystems and Protecting Forests</h2>
+            <p class="intro-para"><span>ECOguardians</span> is a passionate NGO dedicated to environmental conservation. 
+                Our mission is to safeguard our planet by restoring ecosystems and protecting forests 
+                from invasive species.We believe in the power of trees to combat climate change. 
+                Join us in planting forests and restoring green cover. We believe in healing our planet. 
+                EcoGuardians actively works towards restoring degraded forests in South India. 
+                Our community-participative model involves indigenous communities, integrating their 
+                knowledge into restoration projects.</p>
+        </div>
+        
+        <!-- <h2 class="head">Our Intiatives</h2> -->
+        <div class="slider-gallery">
+            <i class="fa-solid fa-chevron-left" id="backBtn"></i>
+            <div class="gallery">
+                <div>
+                    <span><img src="./assets/images/img-1.jpeg" alt="img-1" class="img-items"></span>
+                    <span><img src="./assets/images/img-2.jfif" alt="img-2" class="img-items"></span>
+                    <span><img src="./assets/images/img-3.jpg" alt="img-3" class="img-items"></span>
+                </div>
+                <div>
+                    <span><img src="./assets/images/img-4.jfif" alt="img-4" class="img-items"></span>
+                    <span><img src="./assets/images/img-5.jpg" alt="img-5" class="img-items"></span>
+                    <span><img src="./assets/images/img-6.jfif" alt="img-6" class="img-items"></span>
+                </div>  
+                <div>
+                    <span><img src="./assets/images/img-7.jpg" alt="img-7" class="img-items"></span>
+                    <span><img src="./assets/images/img-8.jpg" alt="img-8" class="img-items"></span>
+                    <span><img src="./assets/images/img-9.jpg" alt="img-9" class="img-items"></span>
+                </div>
+            </div>
+            <i class="fa-solid fa-chevron-right" id="nextBtn"></i>  
+        </div>
+    </div>
+</section>
+
+    <!----------------------- cta ----------------------->
+<section class="section cta">
+    <div class="container">
+        <div class="overlay"></div>
+
+        <div class="cta-content" >
+            <h2 class="h2 section-title">
+                5000+ Volunteers across the <span>India</span>
+            </h2>
+            <button type="button" class="btn btn-outline">
+                <span>Become a Volunteer</span>
+            <i class="fa-regular fa-heart" ></i>
+            </button>
+        </div>
+        
+    </div>
+</section>
+
+    <!----------------------- Services ----------------------->
+<section class="services" id="services">
+    <div class="service-container">
+        <div class="section-title">
+            <h2>Our Services</h2>
+        </div>
+
+        <ul class="cards flex">
+            <li class="card">
+                <img src="./assets/images/IPD.jpg" alt="tiger">
+                <h3>In-Patient Department(IPD)<h3>
+                <p>The IPD is 24-hour facility & houses over 3000 animals at any given point</p>
+            </li>
+            <li class="card">
+                <img src="./assets/images/OPD.jpg" alt="tiger">
+                <h3>Out-Patient Department(OPD)<h3>
+                <p>A 24-hour service with an animal ambulance that works through the night.</p>
+            </li>
+            <li class="card">
+                <img src="./assets/images/ICU.jpg" alt="tiger">
+                <h3>Intensive Care Unit(ICU)<h3>
+                <p>The IPD has ICU centers for both large and small animals.</p>
+            </li>
+            <li class="card">
+                <img src="./assets/images/OT.webp" alt="tiger">
+                <h3>Operation Theatre(OT)<h3>
+                <p>The OT is the hub of SGACC's ongoing Animal Birth Control Programme.</p>
+            </li>
+            <li class="card">
+                <img src="./assets/images/laboratory.jpg" alt="tiger">
+                <h3>Laboratory<h3>
+                <p>Our laboratory is equipped with an x-ray machine, bood testing facility.</p>
+            </li>
+            <li class="card">
+                <img src="./assets/images/ABC.webp" alt="tiger">
+                <h3>ABC for Dogs<h3>
+                <p>Animal Birth Control or ABC is our key programme.</p>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="service-container">
+        <div class="title-help">
+            <h3>How can you help?</h3>
+        </div>
+
+        <ul class="cards-2 flex">
+            <li class="card-2">
+                <img src="./assets/images/adopt.jpg" alt="tiger">
+                <h3>Adopt<h3>
+            </li>
+            <li class="card-2">
+                <img src="./assets/images/foster.jpg" alt="tiger">
+                <h3>Foster<h3>
+            </li>
+            <li class="card-2">
+                <img src="./assets/images/donate.jpg" alt="tiger">
+                <h3>Sponsor<h2>
+            </li>
+        </ul>
+    </div>
+</section>
+
+    <!----------------------- About Us ----------------------->
+<section class="about" id="about">
+    <div class="section-title">
+        <h2>About Us</h2>
+    </div>
+
+    <div class="about-container">
+        <div class="about-iamge">
+            <img src="./assets/images/aboutImage.jpg" alt="">
+        </div>
+        <div class="about-description">
+            Animal welfare is not just about animals. It is about us. Our living conditions, our children, our earth. Cruelty to animals has a significant and irreversible impact on peaceful societies, human health, the economy, and the environment.
+            <br><br>People for Animals, PFA, is India's largest Non-Governmental Animal Welfare Organization with a nationwide network of 26 hospitals, 165 units, 60 mobile units, and 2.5 Lakh members. We work to rescue and rehabilitate sick and needy animals. We set up and run shelters, ambulance services, sterilization programs, treatment camps and disaster rescue missions for animals. We conduct education programs in schools, fight cases in court, and lobby on animal issues in parliament.
+            <br><br>PFA aims to set up an animal welfare centre in each of the nation's 600 districts.
+        </div>
+    </div>
+</section>
+
+    <!----------------------- Story ----------------------->
+<section class="story">
+    <div class="section-title">
+        <h2>Rescue and Love</h2>
+    </div>
+
+    <div class="story-container">
+        <div class="row our-story">
+            <h2>Meet Max: From Stray to Beloved Family Member</h2>
+
+            <p><br>
+                Max was found wandering the streets, alone and frightened. He was severely underweight and suffering from a skin condition due to neglect. Our rescue team spotted him near a busy highway, trembling with fear and desperation.              
+                We brought Max to our shelter, where he received immediate medical attention. Our dedicated vets treated his skin condition, and he began to gain weight with proper 
+                nutrition. Max's journey wasn't just about physical healing; he needed to learn to trust humans again. Our team of volunteers spent countless hours with Max, offering him love and patience.                 
+                Slowly but surely, Max began to show his playful side. His eyes brightened, and his tail wagged more each day. After several months of care and rehabilitation, Max was ready for adoption.<br><br>                  
+                That's when the Smith family came into the picture. They had recently lost their beloved dog and were looking for a new furry friend to join their family. When they met Max, 
+                it was love at first sight. Max's gentle nature and playful spirit won them over instantly.              
+                Today, Max is thriving in his new home. He enjoys long walks in the park, playing fetch in the backyard, and snuggling up with his new family. The Smiths often share photos and updates, and it's clear that Max has found his forever home.
+                Max's story is just one of many successes that drive us to continue our mission. Every dog deserves a second chance, and with your support, we can ensure more happy endings like Max's. Thank you for being a part of our journey.
+            </p>
+
+        </div>
+    </div>
+</section>
+
+    <!----------------------- testi ----------------------->
+<section class="testi">
+    <div class="testi-content">
+        <h2 class="h2 section-title">
+            What People Say About <strong>Our Organization</strong>
+        </h2>
+
+        <div class="testi-card">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <figure>
+                            <img src="./assets/images/user1.png" alt="name " width="60" height="60" loading="lazy">
+                            <div class="user-name">
+                                Prachi Desai
+                            </div>
+                        </figure>
+
+                        <div>
+                            <div class="testi-text">
+                                The organization's campaigns have significantly impacted wildlife conservation in 
+                                our community. Their dedication to rescuing and rehabilitating animals is truly 
+                                commendable. Volunteering with them has been an incredibly rewarding experience.
+                            </div>
+                            <h3 class="testi-name">Prachi Desai</h3>
+                            <p>Business Manager</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <figure>
+                            <img src="./assets/images/user2.jpg" alt="name " width="60" height="60" loading="lazy">
+                            <div class="user-name">
+                                Vishakha Gothankar
+                            </div>
+                        </figure>
+                        <div>
+                            <div class="testi-text">
+                                I've seen firsthand the positive changes brought by this organization's activities. 
+                                From habitat restoration to public awareness drives, their efforts in protecting 
+                                endangered species are nothing short of remarkable. Proud to support their cause!
+                            </div>
+                            <h3 class="testi-name">Vishakha Gothankar</h3>
+                            <p>Business Manager</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                    <figure>
+                        <img src="./assets/images/user3.jpg" alt="name " width="60" height="60" loading="lazy">
+                        <div class="user-name">
+                            Manasi Agre
+                        </div>
+                    </figure>
+                    <div>
+                        <div class="testi-text">
+                            Participating in their wildlife protection campaigns has been enlightening. The 
+                            organization's commitment to educating the public and taking tangible actions to 
+                            safeguard animals makes a real difference. Their work is truly inspiring and impactful.
+                        </div>
+                        <h3 class="testi-name">Manasi Agre</h3>
+                        <p>Business Manager</p>
+                    </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+    <!----------------------- Contact ----------------------->
+<section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact US</h2>
+            </div>
+    
+        <div class="row flex">
+            <div class="col information">
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"> &nbsp;B-32, Royal Park, MG Road, Shivaji Nagar, Pune</i></p>
+                    <p><i class="fas fa-envelope"> &nbsp;ecoguardians@gmail.com</i></p>
+                    <p><i class="fas fa-phone"> &nbsp; 9271465987</i></p>
+                    <p><i class="fas fa-clock"> &nbsp; 9 AM to 5 PM</i></p>
+                    <p><i class="fas fa-globe"> &nbsp; Unity in Diversity</i></p>
+                </div>
+            </div>
+
+            <div class="col form">
+                <form action="#">
+                    <input type="text" placeholder="Name" required>
+                    <input type="Email" placeholder="Email" required>
+                    <textarea name="Message" placeholder="Message" required></textarea>
+                    <button id="submit" type="submit">Send message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <!----------------------- footer ----------------------->
+<footer class="footer">
+<div class="container">
+    <span>Copyright &copy;  2024 All Rights Are Reserved Home Contact</span>
+</div>
+</footer>
+
+       <script src="./script.js" defer></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

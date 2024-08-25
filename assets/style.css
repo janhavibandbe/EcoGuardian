@@ -1,0 +1,692 @@
+:root{
+    --bright-yellow-crayola:hsl(40,100%,50%);
+    --medium-turquoise:hsl(172,48%,59%);
+    --silver-chalice:hsl(0,8%,70%);
+    --cerie-black-1:hsl(0,0%,13%);
+    --cerie-black-2:hsl(0,0%,15%);
+    --cerie-black-3:hsla(220,10%,10%,0.8);
+    --granite-gray:hsl(0,0%,38%);
+    --raisin-black:hsl(220,0%,14%);
+    --sonic-silver:hsl(0,0%,47%);
+    --pistachio-1:hsla(80, 77%, 29%, 0.5);
+    --baby-powder:hsl(86,41%,97%);
+    --light-gray:hsl(0,0%,80%);
+    --pistachio-2:hsl(86,45%,54%);
+    --platinum:hsl(0,0%,91%);
+    --cultured:hsl(0,0%,54%);
+    --white-60:hsla(0,0%,100%,0.6);
+    --white-50:hsla(0,0%,100%,0.5);
+    --white-10:hsla(0,0%,100%,0.1);
+    --white:hsl(0,0%,100%);
+    --black:hsl(0,0%,0%);
+    --jet:hsl(0,0%,10%);
+    
+
+    /* typography */
+    --ff--oswald:'Oswald',sans-serif;
+    --ff--inter:'Inter',sans-serif;
+    --ff--roboto:'Roboto',sans-serif;
+
+    --fs-1: 13rem;
+    --fs-2: 4rem;
+    --fs-3: 3.5rem;
+    --fs-4: 3rem;
+    --fs-5: 2.4rem;
+    --fs-6: 2.2rem;
+    --fs-7: 2rem;
+    --fs-8: 1.6rem;
+    --fs-9: 1.5rem;
+    --fs-10: 1.4rem;
+    
+    --fs-300: 300;
+    --fs-500: 500;
+    --fs-600: 600;
+    --fs-700: 700;
+
+    /* spacing section */
+    --section-padding: 20px;
+
+    /* card-shadow */
+    --card-shadow: 0 5px 20px -8px hsla(0,0%,0%,0.15);
+
+    /* transition */
+    --transition-1:0.05s ease;
+    --transition-2:0.25s ease;
+    --cubic-in: cubic-bezier(0.51,0.03,0.64,0.28);
+    --cubic-out: cubic-bezier(0.33,0.85,0.4,0.96);
+    
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: var(--ff--roboto);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--baby-powder);
+}
+
+/******************* navbar *******************/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--pistachio-2);
+    z-index: 100;
+    font-family: "Poppins", sans-serif;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.service-container{
+    width: 100%;  
+    padding-right: 2rem;
+}
+.navbar{
+    justify-content: space-between;
+}
+.nav-links{
+    gap: 20px;
+    list-style: none;
+}
+.navbar a{
+    padding: 20px 0;
+    display: inline-block;
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.2s;
+}
+.navbar a:hover{
+    color: var(--bright-yellow-crayola);
+}
+.navbar .logo a{
+    color: var(--cerie-black-1);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.navbar .logo a:hover{
+    transform: scale(1.1);
+}
+
+/******************* home page *******************/
+.homepage{
+    position: relative;
+    height: 100vh;
+    transition: all 0.7s linear ;
+}
+.homepage .image{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.homepage .image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+.homepage .image video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.homepage::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.homepage .content{
+    padding-inline: 5rem;
+    position: relative;
+    height : 85%;
+    flex-direction: column;
+    justify-content: center;
+}
+.homepage .text{
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 1.8rem;
+}
+.homepage .text p{
+    font-size: 1.8rem;
+}
+.homepage .text h2{
+    font-size: 65px;
+    font-weight: 700px;
+    margin-bottom: 20px;
+}
+.homepage .text h2 span{
+    color: var(--bright-yellow-crayola);
+}
+.homepage .text h2 span::before{
+    content: "";
+    right: -8px;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite ;
+}
+.homepage .text h2 span.stop-blinking::before{
+    animation: none;
+}
+@keyframes blink {
+    50%{
+        opacity: 0;
+    }
+}
+.homepage a {
+    color: var(--cerie-black-2);
+    text-decoration: none;
+    background: var(--white);
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid var(--white);
+    box-shadow: rgba(0, 0, 0,0.3) 0 5px 10px;
+    font-size: 18px;
+    transition: var(--cubic-in);
+}
+.homepage a:hover{
+    color: var(--baby-powder);
+    background: rgba(255, 255, 255,0.3);
+}
+
+/******************* gallery *******************/
+.sliders{
+    padding-inline: 6rem;
+}
+.sliders .intro-head {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: darkgreen;
+}
+.intro p{
+    font-size: 20px;
+    letter-spacing: 1.2px;
+}
+.sliders .gallery { 
+    width: 100rem;
+    display: flex;
+    overflow-x: scroll;
+}
+.sliders .gallery div{
+    width: 25rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+    padding: 10px;
+    flex: none;
+}
+.sliders .gallery div img {
+    height: 8rem;
+    width: 100%;
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+}
+.sliders .gallery::-webkit-scrollbar {
+    display: none;
+}
+.sliders .slider-container{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+}
+.sliders .slider-container .slider-gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#backBtn ,#nextBtn {
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+}
+.sliders .gallery div img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/******************* cta *******************/
+.cta .container{
+    width: 100%;
+    margin: auto;
+    background-image: url(./images/puppy.jpg);
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: auto;
+    position: relative;
+}
+.cta-content{
+    text-align: center;
+    padding-block: 35px;
+}
+.cta .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: linear-gradient(to right, #0575E6, #00F260);
+    opacity: 0.5;
+}
+.cta .section-title{
+    font-family: var(--ff--roboto);
+    color: var(--white);
+    font-size: 40px;
+    line-height: 1.2;
+    margin-block-end: 25px;
+}
+.cta .section-title span { 
+    color: var(--jet); 
+    font-family: var(--ff--inter);
+}
+.cta .btn-outline {
+    height: 3.6rem;
+    margin-inline : auto;
+    padding: 10px;
+    background-color: var(--pistachio-2);
+    border: 2px solid var(--white);
+    font-size: 18px;
+    transition: var(--cubic-in);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0,0.3) 0 5px 10px;
+}
+.cta .btn-outline:hover{
+    color: var(--baby-powder);
+    background: rgba(255, 255, 255,0.3);
+}
+
+/******************* services *******************/
+section{
+    padding-top: 80px;
+}
+.section-title{
+    text-align: center;
+}
+section h2{
+    font-size: 40px;
+}
+section  h3 {
+    font-size: 1.2rem; 
+}
+section .title-help{
+    padding-left: 2rem;
+}
+section .title-help h3 {
+    font-family: var(--ff--inter);
+    font-size: 2.2rem;
+    color: #006400;
+}
+section  .cards p{
+    font-size: 1rem;
+}
+section .cards{
+    margin-top: 50px ;
+    justify-content: space-between;
+    flex-wrap: wrap ;
+}
+section .card{
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 3 - 30px);
+    text-align: center;
+    list-style: none;
+    background-color: var(--white);
+    padding: 40px 15px;
+    border-radius: 5px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 40px;
+    background-color: rgb(107, 117, 113);
+}
+section .card img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+section .card p{
+    margin-top: 5;
+
+}
+section .cards-2{
+    margin-top: 50px ;
+    flex-wrap: wrap ;
+    justify-content: space-between;
+}
+section .card-2 {
+    width: calc(100% / 3 - 30px);
+    text-align: center;
+    list-style: none;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+section .card-2:is(:hover ,:focus-within) {
+    outline-color: var(--pistachio-1); 
+ }
+section .card-2 img {
+    height: 320px;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 20px;
+}
+
+/******************* about *******************/
+.about{
+    display: grid;
+    margin-top: -2rem;
+}
+.about .about-container{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.about .about-container .about-iamge{
+    width: 40rem;
+}
+.about .about-container .about-iamge img{
+    width: 40rem;
+}
+.about .about-container .about-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+/******************* story *******************/
+.story{
+    padding: 2rem;
+}
+.story .story-container{
+    padding-inline: 7rem;
+    padding-block: 2rem;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    border-radius: 2rem;
+    position: relative;
+    width: 100%;
+    background: url(./images/dog.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.story-container .our-story h2, 
+.story-container .our-story p{
+    color: var(--white);
+}
+
+/******************* testi *******************/
+.testi {
+    background-color: var(--jet);
+}
+
+.testi-content {
+    padding: var(--section-padding);
+}
+.testi .section-title{
+    color: var(--white);
+    margin-block: 10px 40px;
+}
+.testi-card{
+    padding-inline: 8rem;
+    color: var(--white);
+}
+.testi-content .testi-card .carousel{
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    width: 100%;
+    height: 30rem;
+}
+.carousel .carousel-inner .carousel-item figure{
+    display: flex;
+    align-items: center;
+    gap: 1.7rem;
+}
+.carousel .carousel-inner .carousel-item figure img{
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+}
+.carousel .carousel-inner .carousel-item figure .user-name{
+    display: flex;
+    justify-content: left;
+    font-size: 1.2rem;
+    border-bottom: 0.1rem solid var(--white);
+    width: 100%;
+}
+.testi-text,
+.testi-name{
+    font-size: var(--fs-8);
+}
+.testi-text,
+.testi-title{
+    font-family: var(--ff--inter);
+}
+.testi-text{
+    padding-block-end: 30px;
+    border-block-end: 1px solid var(--white-10);
+    margin-block: 20px 30px;
+    font-size: var(--fs-10)
+}
+
+/******************* contact *******************/
+.contact .row {
+    justify-content: space-between;
+    margin: 60px 0 90px;
+}
+.contact .row .col {
+    padding: 0 10px;
+    width: calc(100% / 2 - 50px);
+}
+.contact .row .col p {
+    color: #7a7a7a;
+    margin-bottom: 10px;
+}
+.contact .row .col p i {
+    margin-right: 10px;
+}
+.contact .form input {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    border: 1px solid #bfbfbf;
+    outline: none;
+}
+.contact .form textarea {
+    padding: 15px;
+    width: 100%;
+    height: 150px;
+    outline: none;
+    resize: none;
+    border: 1px solid #bfbfbf;
+}
+.contact .form button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 17px;
+    color: #fff;
+    margin-top : 10px ;
+    border: none;
+    background : #333;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.contact .form button:hover{
+    background: #525252;
+}
+
+.footer {
+    background: #333;
+    padding: 20px;
+}
+.footer span {
+    color: var(--white);
+}
+
+#menu-toggler,#hamburger-btn{
+    display: none;
+}
+
+
+/******************* responsiveness *******************/
+@media (width < 1030px){
+    .about .about-container .about-iamge{
+        width: 30rem;
+    }
+    .about .about-container .about-iamge img{
+        width: 30rem;
+    }
+}
+
+@media (width < 860px ) {
+    .homepage .content{
+        padding-top: 4rem;
+    }
+    .homepage .text p{
+        font-size: 1.4rem;
+    }
+    .homepage .text h2{
+        font-size: 55px;
+    }
+    .navbar .nav-links {
+        position: fixed;
+        top: 65px;
+        height: 100%;
+        display: block;
+        background: var(--cerie-black-3);
+        width: 300px;
+        padding-left: 20px;
+        padding-top: 30px;
+        left: -100%;
+        transition: all 0.4s ease;
+    }
+    #menu-toggler:checked ~ .nav-links {
+        left: 0;
+    }
+    .nav-links li {
+        font-size: 18px;
+    }
+    
+    #hamburger-btn{
+        display: block;
+        color: var(--white);
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .sliders .slider-container{
+        grid-template-columns: 100%;
+    }
+    section .cards .card {
+        width: calc(100% / 2 - 15px);
+    }
+    section .card-2 img {
+        height: 220px;
+    }
+    .about .about-container{
+        flex-direction: column;
+    }
+    .about .about-container .about-iamge{
+        width: 100%;
+        padding-inline: 7rem;
+    }
+    .about .about-container .about-iamge img{
+        width: 100%;
+    }
+    .story .story-container{
+        padding-inline: 4rem;
+    }
+    .testi-card{
+        padding-inline: 3rem;
+    }
+    .contact .row {
+        flex-direction: column;
+    }
+    .contact .row .col{
+       width: 100%;
+    }
+    .contact .row .col:last-child{
+        margin-top: 40px;
+    }
+}
+
+@media (width < 580px){
+    header{
+        padding-inline: 2rem;
+    }
+}
+
+@media (width < 560px) {
+    .service-container{
+        padding-right: 1rem;
+    }
+    section .cards .card {
+        width: 100%;
+    }
+    .sliders{
+        padding-inline: 2rem;
+    }
+    .sliders .slider-container .slider-gallery{ 
+        display: none;
+    }
+    .section h2{
+        font-size: 1.5rem;
+    }
+    section .card-2{
+        width: 100%;
+    }
+    section .card-2 img {
+        height: 180px;
+    }
+    .about .about-container .about-iamge{
+        padding-inline: 2rem;
+    }
+    .story .story-container{
+        padding-inline: 2rem;
+    }
+    .story-container .our-story h2{
+        font-size: 1.8rem;
+    }
+    .story-container .our-story p{
+        font-size: 0.8rem;
+    }
+    .testi-card{
+        padding-inline: 1rem;
+    }
+    .carousel .carousel-inner .carousel-item figure img{
+        height: 5rem;
+        width: 5rem;
+    }
+    .testi-text,
+    .testi-name{
+    font-size: 1.2rem;
+    }
+}
